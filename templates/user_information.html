@@ -1,0 +1,41 @@
+{% extends 'basic.html' %}
+
+{% block title %}USER Information{% endblock %}
+{% block header %}USER Information{% endblock %}
+
+{% block content %}
+
+
+<!--   <div class="row">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{user.image_url}}">
+          <span class="card-title grey-text text-darken-4">{{user.first_name}} {{user.last_name}}</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+    <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{{user.image_url}}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{user.first_name}} {{user.last_name}}<i class="material-icons right">more_vert</i></span>
+      {% for post in user.posts %}
+      <p><a href="/posts/{{post.id}}">{{post.title}}</a></p>
+      {% endfor %}
+      <a class="waves-effect waves-light btn">Edit</a>
+  <a class="waves-effect waves-light btn"><i class="material-icons left">Delete</i>button</a>
+  <a class="waves-effect waves-light btn"><i class="material-icons right">Add Post</i>button</a>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{user.first_name}} {{user.last_name}}<i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+  </div>
+{% endblock %}

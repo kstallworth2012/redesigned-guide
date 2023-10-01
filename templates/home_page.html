@@ -1,0 +1,14 @@
+{% extends 'basic.html' %}
+
+{% block title %}Recent Posts{% endblock %}
+{% block header %}Blog Posts{% endblock %}
+
+{% block content %}
+{% for post in posts %}
+  <div class="divider"></div>
+  <div class="section">
+    <h3><a href="/posts/{{post.id}}">{{post.title}}</a></h3>
+    <p>BY...{{post.user.first_name}} {{post.user.last_name}} created on {{post.create_at}}</p>
+  </div>
+{% endfor %}
+{% endblock %}

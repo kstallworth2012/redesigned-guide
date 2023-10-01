@@ -1,0 +1,30 @@
+{% extends 'basic.html' %}
+
+{% block title %}Edit POST  {% endblock %}
+{% block header %}POST TITLE {% endblock %}
+
+{% block content %}
+<div class="row">
+		<form class="col s12">
+			<div class="row">
+					<div class="input-field col s12">
+						   <input placeholder="Post Title" id="title" name="title" type="text" class="validate">
+          					<label for="title">Title</label>
+						
+					</div>
+			</div>
+		<div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea2" class="materialize-textarea" name="content" data-length="5120"></textarea>
+            <label for="content">Content</label>
+          </div>
+        </div>
+              <div class="col s6 offset-s6">
+              	<button>Edit</button>
+              	<button>Cancel</button>
+              </div>
+
+		</form>
+	
+</div>
+{% endblock %}

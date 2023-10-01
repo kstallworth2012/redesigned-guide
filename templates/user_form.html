@@ -1,0 +1,36 @@
+{% extends 'basic.html' %}
+
+{% block title %}USER FORM {% endblock %}
+{% block header %}CREATE A NEW USER{% endblock %}
+
+{% block content %}
+<div class="row">
+	<form class="col s12" action="/new-user" method="POST">
+		<div class="row">
+			<div class="input-field col s6">
+					<input type="text" name="first_name" id="first_name" placeholder="Enter First Name" class="validate">
+					<label for="first_name">First Name:</label>
+			</div>
+			<div class="input-field col s6">
+				<input type="text" name="last_name" id="last_name" placeholder="Enter Last Name" class="validate">
+				<label for="last_name">Last Name</label>
+			</div>		
+		</div>
+
+	 <div class="row">
+	 	<div class="input-field col s12">
+	 		<input type="text" name="image_url" placeholder="Enter Image URL" class="validate">
+	 		<label for="image_url">Image URL</label>
+	 	</div>
+	 </div>
+	 <div class="row">
+			<div class="input-field col s12">
+				  <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
+				    <!-- <i class="material-icons right">send</i> -->
+				  </button>
+			</div>
+			</div>
+	</form>
+	
+</div>
+{% endblock %}

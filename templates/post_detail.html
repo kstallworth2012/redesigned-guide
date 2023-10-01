@@ -1,0 +1,20 @@
+{% extends 'basic.html' %}
+
+{% block title %}USER Post Detail{% endblock %}
+{% block header %}{{user_post.title}} {% endblock %}
+
+
+{% block content %}
+ <p class="flow-text">{{user_post.content}}</p>
+<!-- 
+              <div class="col s6 offset-s6">
+              	<button>Edit</button>
+              	<button>Cancel</button>
+              </div> -->
+
+<p><h4><i>By...{{user_post.user.first_name}} {{user_post.user.last_name}}</i></h4></p>
+<a class="waves-effect waves-light btn">Cancel</a>
+<a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Edit</a>
+<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Delete</a>
+
+{% endblock %}

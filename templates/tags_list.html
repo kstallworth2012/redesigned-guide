@@ -1,0 +1,14 @@
+{% extends 'basic.html' %}
+
+{% block title %}Tag LIST {% endblock %}
+{% block header %}Tag LIST INFORMATION {% endblock %}
+
+
+{% block content %}
+<ul class="collection with-header">
+	<li class="collection-header"><h4>Tag List</h4></li>
+	{% for tag in tags %}
+ <li class="collection-item"><div>{{tag.name}}<a href="" class="secondary-content"><i class="material-icons">Profile</i></a></div></li>
+ {% endfor %}
+</ul>
+{% endblock %}
